@@ -11,7 +11,7 @@ const Blog = () => {
                     <div className="dFlex">
                         <div className="blogCard">
                             <div className="blogCardHead">
-                                <img src="../../public/images/blogImage-1.svg" alt="BlogImage" className="blogCardImage" />
+                                <img src="../../../public/images/blogImage-1.svg" alt="BlogImage" className="blogCardImage" />
                             </div>
                             <div className="blogCardBody">
                                 <p className="blogCardBodyPara">20 January, 2023</p>
@@ -21,7 +21,7 @@ const Blog = () => {
                         </div>
                         <div className="blogCard">
                             <div className="blogCardHead">
-                                <img src="../../public/images/blogImage-2.svg" alt="BlogImage" className="blogCardImage" />
+                                <img src="../../../public/images/blogImage-2.svg" alt="BlogImage" className="blogCardImage" />
                             </div>
                             <div className="blogCardBody">
                                 <p className="blogCardBodyPara">15 January, 2023</p>
@@ -31,7 +31,7 @@ const Blog = () => {
                         </div>
                         <div className="blogCard">
                             <div className="blogCardHead">
-                                <img src="../../public/images/blogImage-3.svg" alt="BlogImage" className="blogCardImage" />
+                                <img src="../../../public/images/blogImage-3.svg" alt="BlogImage" className="blogCardImage" />
                             </div>
                             <div className="blogCardBody">
                                 <p className="blogCardBodyPara">08 January, 2023</p>

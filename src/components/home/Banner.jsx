@@ -12,10 +12,10 @@ const Banner = () => {
                             <p className="bannerPara">
                             Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et.
                             </p>
-                            <a href="../../public/documents/MY CV.pdf" target="_blank" className="commonBtn">Download My CV</a>
+                            <a href="../../../public/documents/MY%20CV.pdf" target="_blank" className="commonBtn">Download My CV</a>
                         </div>
                         <div className="bannerRight">
-                            <img src="../../public/images/bannerImage.svg" alt="BannerImage" width="600" height="auto"/>
+                            <img src="../../../public/images/bannerImage.svg" alt="BannerImage" width="600" height="auto"/>
                         </div>
                     </div>
                 </div>

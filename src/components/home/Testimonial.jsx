@@ -10,7 +10,7 @@ const Testimonial = () => {
                     <div className="dFlex">
                         <div className="testimonialCard">
                             <div className="testimonialHead">
-                                <img src="../../public/images/Testimonial_Image-1.svg" alt="Testimonial_Image" />
+                                <img src="../../../public/images/Testimonial_Image-1.svg" alt="Testimonial_Image" />
                                 <div>
                                     <h3 className="testimonialCardTitle">Siam Talukder</h3>
                                     <p className="testimonialCardPara">CTO, Xyz Group</p>
@@ -22,7 +22,7 @@ const Testimonial = () => {
                         </div>
                         <div className="testimonialCard">
                             <div className="testimonialHead">
-                                <img src="../../public/images/Testimonial_Image-2.svg" alt="Testimonial_Image" />
+                                <img src="../../../public/images/Testimonial_Image-2.svg" alt="Testimonial_Image" />
                                 <div>
                                     <h3 className="testimonialCardTitle">ABM Shawon Islam</h3>
                                     <p className="testimonialCardPara">CEO, Abc Agency</p>
@@ -34,7 +34,7 @@ const Testimonial = () => {
                         </div>
                         <div className="testimonialCard">
                             <div className="testimonialHead">
-                                <img src="../../public/images/Testimonial_Image-3.svg" alt="Testimonial_Image" />
+                                <img src="../../../public/images/Testimonial_Image-3.svg" alt="Testimonial_Image" />
                                 <div>
                                     <h3 className="testimonialCardTitle">Azmir Uddin Alif</h3>
                                     <p className="testimonialCardPara">Director, Techso</p>

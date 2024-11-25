@@ -7,7 +7,7 @@ const About = () => {
                 <div className="container">
                     <div className="dFlex">
                         <div className="aboutLeft">
-                            <img src="../../public/images/aboutImage.svg" alt="About Image" />
+                            <img src="../../../public/images/aboutImage.svg" alt="About Image" />
                         </div>
                         <div className="aboutRight">
                             <p className="sectionSubTitle">About Me</p>
@@ -17,21 +17,21 @@ const About = () => {
                             </p>
                             <div className="aboutProjectExp">
                                 <div className="aboutItem">
-                                    <img src="../../public/images/aboutIcon-1.svg" alt="About Icon" />
+                                    <img src="../../../public/images/aboutIcon-1.svg" alt="About Icon" />
                                     <div>
                                         <span>350+</span>
                                         <h3>Complete Project</h3>
                                     </div>
                                 </div>
                                 <div className="aboutItem">
-                                    <img src="../../public/images/aboutIcon-2.svg" alt="About Icon" />
+                                    <img src="../../../public/images/aboutIcon-2.svg" alt="About Icon" />
                                     <div>
                                         <span>350+</span>
                                         <h3>Year of experience</h3>
                                     </div>
                                 </div>
                             </div>
-                            <a href="../../public/documents/MY CV.pdf" target="_blank" className="commonBtn">Download My CV</a>
+                            <a href="../../../public/documents/MY%20CV.pdf" target="_blank" className="commonBtn">Download My CV</a>
                         </div>
                     </div>
                 </div>
