@@ -17,6 +17,7 @@ span{
 body{
     font-family: "Jost", sans-serif;
     font-size: 16px;
+    font-style: normal;
     font-weight: 400;
     line-height: 0.80;
     color: var(--smallText);
@@ -35,3 +36,62 @@ body{
 .dFlex{
     display: flex;
 }
+/* Common CSS Start */
+.sectionSubTitle{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.2px;
+    color: var(--bigText);
+}
+.sectionTitle{
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 95px;
+    color: var(--bigText);
+    margin: 10px 0 80px;
+}
+/* Common CSS End */
+
+/* NAV section Start */
+#nav{
+    padding: 25px 0;
+}
+.navWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav .dFlex{
+    justify-content: center;
+    align-items: center;
+    column-gap: 32px;
+    text-transform: capitalize;
+    color: var(--bigText);
+}
+.navBtn{
+    font-size: 21px;
+    align-items: center;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    background-color: var(--btnColor);
+    padding: 15px 32px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+/* NAV section End */
+
+/* Banner section Start */
+#banner .dFlex{
+    justify-content: space-between;
+    align-items: center;
+}
+/* Banner section End */
+
+
+
+/* Banner section Start */
+/* Banner section End */
