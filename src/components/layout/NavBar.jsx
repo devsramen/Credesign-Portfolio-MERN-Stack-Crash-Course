@@ -4,7 +4,11 @@ const NavBar = () => {
     return (
         <Fragment>
             <nav id="nav">
-                <h1>logo</h1>
+                <div className="container">
+                    <div className="navWrapper">
+                        <img src="./public/images/Logo.svg" alt="Logo"/>
+                    </div>
+                </div>
             </nav>
         </Fragment>
     );
