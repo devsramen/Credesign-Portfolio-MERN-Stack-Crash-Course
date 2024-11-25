@@ -16,7 +16,7 @@ const NavBar = () => {
                             <li><a href="#">Testimonial</a></li>
                             <li><a href="#">blog</a></li>
                         </ul>
-                        <a href="#" className="navBtn">Contact Us</a>
+                        <a href="#" className="commonBtn">Contact Us</a>
                     </div>
                 </div>
             </nav>
