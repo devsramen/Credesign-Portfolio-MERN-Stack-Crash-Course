@@ -6,17 +6,17 @@ const NavBar = () => {
             <nav id="nav">
                 <div className="container">
                     <div className="navWrapper">
-                        <img src="./public/images/Logo.svg" alt="Logo" width="135" height="auto"/>
+                        <a href="/"><img src="./public/images/Logo.svg" alt="Logo" width="135" height="auto"/></a>
                         <ul className="dFlex">
-                            <li><a href="../../pages/HomePage.jsx">Home</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Resume</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="#">blog</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">about</a></li>
+                            <li><a href="/service">Services</a></li>
+                            <li><a href="/resume">Resume</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                            <li><a href="/testimonial">Testimonial</a></li>
+                            <li><a href="/blogs">blogs</a></li>
                         </ul>
-                        <a href="#" className="commonBtn">Contact Us</a>
+                        <a href="/contactUs" className="commonBtn">Contact Us</a>
                     </div>
                 </div>
             </nav>

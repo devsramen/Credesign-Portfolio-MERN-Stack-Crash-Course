@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="container">
                         <div className="dFlex">
                         <div className="footerUpperContent">
-                            <a href="../../pages/HomePage.jsx">
+                            <a href="/">
                                 <img src="../../../public/images/FooterLogo.svg" alt="FooterLogo" />
                             </a>
                             <p className="footerPara">
@@ -24,25 +24,25 @@ const Footer = () => {
                         </div>
                         <ul className="footerUpperContentLink">
                             <li>Explore Link</li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Resume</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/resume">Resume</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                            <li><a href="/blogs">Blog</a></li>
                         </ul>
                         <ul className="footerUpperContentLink">
                             <li>My Services</li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">Mobile App</a></li>
-                            <li><a href="#">Graphics Design</a></li>
-                            <li><a href="#">Web Developer</a></li>
+                            <li><a href="/">UI/UX Design</a></li>
+                            <li><a href="/">Mobile App</a></li>
+                            <li><a href="/">Graphics Design</a></li>
+                            <li><a href="/">Web Developer</a></li>
                         </ul>
-                        <ul className="footerUpperContentLink">
+                        <ul className="footerUpperContentLink footerUpperContentLinkLast">
                             <li>Follow me</li>
                             <li>
-                                <a href="#"><FaFacebookF className="footerSocialIcon"/></a>
-                                <a href="#"><FaTwitter className="footerSocialIcon"/></a>
-                                <a href="#"><FaGlobe className="footerSocialIcon"/></a>
-                                <a href="#"><FaBehance className="footerSocialIcon"/></a>
+                                <a href="/"><FaFacebookF className="footerSocialIcon"/></a>
+                                <a href="/"><FaTwitter className="footerSocialIcon"/></a>
+                                <a href="/"><FaGlobe className="footerSocialIcon"/></a>
+                                <a href="/"><FaBehance className="footerSocialIcon"/></a>
                             </li>
                             <li>
                                 <IoLocationOutline className="footerLocation"/><span>202 Dog Hill Lane Beloit, <br/>KS 67420</span>

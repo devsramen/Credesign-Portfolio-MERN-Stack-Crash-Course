@@ -16,7 +16,7 @@ const Blog = () => {
                             <div className="blogCardBody">
                                 <p className="blogCardBodyPara">20 January, 2023</p>
                                 <h3 className="blogCardBodyTitle">Become a UX/UI Designer With Career Foundry.</h3>
-                                <a href="#">Read More <FaArrowRight /></a>
+                                <a href="/">Read More <FaArrowRight /></a>
                             </div>
                         </div>
                         <div className="blogCard">
@@ -26,7 +26,7 @@ const Blog = () => {
                             <div className="blogCardBody">
                                 <p className="blogCardBodyPara">15 January, 2023</p>
                                 <h3 className="blogCardBodyTitle">The Best App Development For Your Business Plan.</h3>
-                                <a href="#">Read More <FaArrowRight /></a>
+                                <a href="/">Read More <FaArrowRight /></a>
                             </div>
                         </div>
                         <div className="blogCard">
@@ -36,7 +36,7 @@ const Blog = () => {
                             <div className="blogCardBody">
                                 <p className="blogCardBodyPara">08 January, 2023</p>
                                 <h3 className="blogCardBodyTitle">The Best Portfolio For Agency Design Thinking</h3>
-                                <a href="#">Read More <FaArrowRight /></a>
+                                <a href="/">Read More <FaArrowRight /></a>
                             </div>
                         </div>
                     </div>
