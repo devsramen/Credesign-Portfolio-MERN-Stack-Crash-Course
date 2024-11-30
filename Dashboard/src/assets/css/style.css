@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.80;
+    color: var(--smallText);
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+ol,ul{
+    list-style-type: none;
+}
+span{
+    display: inline-block;
+}
+.container{
+    width: 1320px;
+    margin: 0 auto;
+    background-color: #d6fff685;
+}
+
+/* Dashboard start */
+main{
+    width: 100%;
+    display: flex;
+}
+main .left{
+    width: 20%;
+    height: 100vh;
+    /* background-color: red; */
+
+    
+    background-color: #2c3e50;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+}
+main .right {
+    width: 80%;
+    height: 100vh;
+    background-color: rgb(239 239 239);
+}
+    
+.left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.left ul li {
+    margin: 10px 0;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.left ul li {
+    text-decoration: none;
+    color: #ecf0f1;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.left ul li:hover {
+    background-color: #34495e;
+    color: #ffffff;
+}
+
+.left ul li a.active {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+/* ====================== */
+  .dashboard {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+  }
+  
+  .dashboard h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .form-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #1abc9c;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #16a085;
+  }
+  
+
+
+
+
+/* Dashboard end */
