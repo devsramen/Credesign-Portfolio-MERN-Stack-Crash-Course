@@ -12,14 +12,14 @@ const NavBar = () => {
 
 
     useEffect(()=>{
-        async function feactData(params) {
+        async function fetchData(params) {
             let data = await axios.get("http://localhost:5050/navBar")
             setList(data.data.menuItem.split(","))
             setButtonText(data.data.buttonText)
             setButtonShow(data.data.buttonShow)
             console.log(data)
         }
-        feactData()
+        fetchData()
     },[])
 
 
