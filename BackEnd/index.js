@@ -27,5 +27,11 @@ app.get('/navBar', async function (req, res) {
  let data = await Navbar.findOne({})
  res.send(data)
 })
+app.put('/navBar/:id', function (req, res) {
+  console.log(req.params.id) 
+  // let data = new Navbar(req.body)
+  // data.save()
+  // res.send({message:"NavBar Created successFully. !"})
+})
 
 app.listen(5050)
