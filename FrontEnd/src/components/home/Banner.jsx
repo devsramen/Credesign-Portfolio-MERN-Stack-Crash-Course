@@ -1,6 +1,21 @@
+import { useEffect } from "react";
 import {Fragment} from "react";
+import axios from 'axios';
 
 const Banner = () => {
+    const [heading,setHeading] = useState("");
+    const [subHeading,setSubHeading] = useState("");
+    const [paragraph,setParagraph] = useState("");
+    const [buttonText,setButtonText] = useState("");
+    const [buttonShow,setButtonShow] = useState(false);
+
+    useEffect(()=>{
+        async function fetchData() {
+            let data = await axios.get("http://localhost:5050/banner/")
+            console.log(data)
+        }
+        fetchData()
+    },[])
     return (
         <Fragment>
             <section id="banner">
