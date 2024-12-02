@@ -28,7 +28,10 @@ app.get('/navBar', async function (req, res) {
  res.send(data)
 })
 app.put('/navBar/:id', function (req, res) {
-  console.log(req.params.id ) 
+  console.log(req.params.id );
+  Navbar.findByIdAndUpdate(req.params.id,req.body).then(()=>{
+    res.send({message:"NavBar Updated successFully. !"})
+  })
   // let data = new Navbar(req.body)
   // data.save()
   // res.send({message:"NavBar Created successFully. !"})
