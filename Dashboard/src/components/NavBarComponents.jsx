@@ -50,7 +50,6 @@ const NavBarComponents = () => {
     useEffect(()=>{
         async function getData(){
             let data = await axios.get('http://localhost:5050/navBar')
-            console.log(data.data)
             setID(data.data._id)
             setMenuItem(data.data.menuItem);
             setButtonText(data.data.buttonText)

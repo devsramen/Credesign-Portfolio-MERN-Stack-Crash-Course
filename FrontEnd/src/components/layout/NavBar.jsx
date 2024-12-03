@@ -33,7 +33,6 @@ const NavBar = () => {
                             {
                                 list.map((item,index)=>(
                                     index == 0?<li><a href="/">{item}</a></li>:<li><a href={item}>{item}</a></li>
-                                    // <li><a href="#">{item}</a></li>
                                 ))
                             }
                             {/* <li><a href="/">Home</a></li>

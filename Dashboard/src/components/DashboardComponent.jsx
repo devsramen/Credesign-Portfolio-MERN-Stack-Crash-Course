@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import NavBarPage from "../pages/navBar/NavBarPage";
+import BannerSection from './../pages/banner/BannerSection';
 
 const DashboardComponent = () => {
     const [activeMenu, setActiveMenu] = useState('NavBar');
@@ -28,7 +29,7 @@ const DashboardComponent = () => {
                     {/* <h1>{activeMenu}</h1> */} 
                     {/* আমরা 27 নং লাইনের মতো করে কেন দিরাম না। এভাবেও তো কাজ করে, তা হলে কেন নিচের মতো করে লিখলাম */}
                     { activeMenu == "NavBar" && <NavBarPage/> }
-                    { activeMenu == "Banner" && <h1>Banner</h1> }
+                    { activeMenu == "Banner" && <BannerSection/> }
                     { activeMenu == "about" && <h1>about</h1> }
                     { activeMenu == "service" && <h1>service</h1> }
                     { activeMenu == "resume" && <h1>resume</h1> }
