@@ -32,8 +32,8 @@ const Testimonial = () => {
                     <h2 className="sectionTitle">Client Feedback</h2>
                     <div className="dFlex">
                         {
-                            testimonialData.map((item)=>(
-                                <div className="testimonialCard" key={item.id}>
+                            testimonialData.map((item,index)=>(
+                                <div className="testimonialCard" key={index}>
                                     <div className="testimonialHead">
                                         <img src={item.img} alt="Testimonial_Image" />
                                         <div>
