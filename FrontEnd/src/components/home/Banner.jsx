@@ -17,7 +17,6 @@ const Banner = () => {
             setParagraph(data.data.paragraph)
             setButtonText(data.data.buttonText)
             setButtonShow(data.data.buttonShow)
-            console.log(data)
         }
         fetchData()
     },[])

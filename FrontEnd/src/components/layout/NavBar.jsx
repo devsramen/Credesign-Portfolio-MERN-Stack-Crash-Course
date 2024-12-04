@@ -17,7 +17,6 @@ const NavBar = () => {
             setList(data.data.menuItem.split(","))
             setButtonText(data.data.buttonText)
             setButtonShow(data.data.buttonShow)
-            console.log(data)
         }
         fetchData()
     },[])
@@ -32,7 +31,7 @@ const NavBar = () => {
                         <ul className="dFlex">
                             {
                                 list.map((item,index)=>(
-                                    index == 0?<li><a href="/">{item}</a></li>:<li><a href={item}>{item}</a></li>
+                                    index == 0?<li key={index}><a href="/">{item}</a></li>:<li key={index}><a href={item}>{item}</a></li>
                                 ))
                             }
                             {/* <li><a href="/">Home</a></li>
