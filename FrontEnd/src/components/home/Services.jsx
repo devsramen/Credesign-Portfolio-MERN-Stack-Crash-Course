@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+ import { Fragment } from "react";
 
 const Services = () => {
     const serviceCardData = [
@@ -68,7 +68,7 @@ const Services = () => {
                                     <h4>{item.serviceCardHead}</h4>
                                     <p>{item.serviceCardDetails}</p>
                                 </div>
-                            </div>                            
+                            </div>
                         ))
                     }
                     {/* <div className="serviceCard">
