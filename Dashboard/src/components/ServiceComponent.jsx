@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import {Fragment, useEffect, useState} from 'react';
 import axios from "axios";
 
 const ServiceComponent = () => {
@@ -40,7 +40,7 @@ const ServiceComponent = () => {
 
     let handelDelete = (item)=>{
         console.log(item._id)
-        axios.post(`http://localhost:5050/service/${item._id}`).then((res)=>{
+        axios.delete(`http://localhost:5050/service/${item._id}`).then((res)=>{
             console.log(res.data)
         })
     }
