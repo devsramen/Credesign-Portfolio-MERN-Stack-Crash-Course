@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import axios from 'axios';
 import { useState } from "react";
 
@@ -7,22 +7,33 @@ const NavBarComponents = () => {
     const [menuItem, setMenuItem] = useState([])
     const [buttonText, setButtonText] = useState([])
     const [buttonShow, setButtonShow] = useState(false)
+    const [id, setID] = useState("")
 
 
     let handelSubmit = (event)=>{
         event.preventDefault()
-        axios.post('http://localhost:5050/navBar',{
-            menuItem:menuItem,
-            buttonText: buttonText,
-            buttonShow: buttonShow,
-        }).then(res=>{
-            console.log(res)
-        }).catch(error=>{
-            console.log(error);            
-        })
-
-
-
+        if( id ){
+            axios.put('http://localhost:5050/navBar/'+id,{
+                menuItem:menuItem,
+                buttonText: buttonText,
+                buttonShow: buttonShow,
+                id:id
+            }).then(res=>{
+                console.log(res)
+            }).catch(error=>{
+                console.log(error)           
+            })
+        }else{
+            axios.post('http://localhost:5050/navBar',{
+                menuItem:menuItem,
+                buttonText: buttonText,
+                buttonShow: buttonShow,
+            }).then(res=>{
+                console.log(res)
+            }).catch(error=>{
+                console.log(error);            
+            })
+        }
     }
 
     let handelMenuItemChange = (e)=>{
@@ -36,6 +47,16 @@ const NavBarComponents = () => {
         setButtonShow(e.target.checked)
     }
 
+    useEffect(()=>{
+        async function getData(){
+            let data = await axios.get('http://localhost:5050/navBar')
+            setID(data.data._id)
+            setMenuItem(data.data.menuItem);
+            setButtonText(data.data.buttonText)
+            setButtonShow(data.data.buttonShow)
+        }
+        getData();
+    },[])
 
 return (
         <Fragment>
@@ -49,16 +70,16 @@ return (
 
                 <div className="form-group">
                 <label>Menu Item:</label>
-                <input onChange={handelMenuItemChange} type="text" name="menuItem" id="menuItem" placeholder="Enter Menu Item" />
+                <input onChange={handelMenuItemChange} value={menuItem} type="text" name="menuItem" id="menuItem" placeholder="Enter Menu Item" />
                 </div>
 
                 <div className="form-group">
                 <label>Button Text:</label>
-                <input onChange={handelButtonText} type="text" name="buttonText" id="buttonText" placeholder="Enter Button Text" />
+                <input onChange={handelButtonText} value={buttonText} type="text" name="buttonText" id="buttonText" placeholder="Enter Button Text" />
                 </div>
 
                 <div className="form-group checkbox-group">
-                <input onChange={handelButtonShow} type="checkbox" name="buttonShow" id="buttonShow" />
+                <input onChange={handelButtonShow} checked={buttonShow} type="checkbox" name="buttonShow" id="buttonShow" />
                 <label>Show Button</label>
                 </div>
 

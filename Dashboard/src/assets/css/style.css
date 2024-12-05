@@ -47,6 +47,8 @@ main .right {
     width: 80%;
     height: 100vh;
     background-color: rgb(239 239 239);
+    padding: 10px;
+    overflow-y: scroll;
 }
     
 .left ul {
@@ -138,9 +140,202 @@ main .right {
   .submit-btn:hover {
     background-color: #16a085;
   }
-  
-
-
-
-
 /* Dashboard end */
+
+/* Banner Start */
+.banner {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  text-align: left;
+}
+.bannerTitle {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.banner label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.banner input[type="text"],
+.banner textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.banner input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.banner textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.banner button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.banner button.show-button {
+  display: inline-block;
+}
+
+.banner button:hover {
+  background-color: #0056b3;
+}
+
+#banner-content {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#banner-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#banner-subheading {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+#banner-paragraph {
+  font-size: 1.1rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+      width: 95%;
+      padding: 20px;
+  }
+
+  .banner h1 {
+      font-size: 2rem;
+  }
+
+  .banner h2 {
+      font-size: 1.4rem;
+  }
+
+  .banner p {
+      font-size: 1rem;
+  }
+}
+
+/* Banner end */
+
+/* Service Start */
+#serviceWrapper {
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    background-color: #ccc1c1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#serviceWrapper .form-group label#showImageTExt{
+    display: inline-block;
+}
+#serviceWrapper .serviceTitle {
+    margin-bottom: 40px;
+    text-align: center;
+}
+#serviceSubmit{
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+#serviceSubmit:hover{
+    color: #fff;
+    background-color: #34495e;
+}
+.button {
+    font-size: 20px;
+    padding: 10px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#tableSection table{
+    width: 98%;
+    margin-left: 20px;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th{
+    font-size: 18px;
+}
+td{
+    font-size: 18px;
+    font-weight: 400;
+}
+.hidden {
+    display: none;
+}
+img {
+    max-width: 100px;
+    height: auto;
+}
+.button {
+    font-size: 20px;
+    padding: 10px 16px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+.button.edit {
+    background-color: #28A745;
+}
+.button.delete {
+    background-color: #DC3545;
+}
+.button:hover {
+    opacity: 0.9;
+}
+
+
+
+/* Service end */
