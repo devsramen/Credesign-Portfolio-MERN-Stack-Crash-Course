@@ -4,6 +4,7 @@ const app = express()
 const mongoose = require('mongoose');
 const Navbar = require('./src/model/NavbarModel');
 const Banner = require('./src/model/BannerModel');
+const ServiceModel = require('./src/model/ServiceModel');
 
 
 app.use(cors()) // access permission to send data from frontend to backend
@@ -48,12 +49,27 @@ app.put('/banner/:id', function (req, res) {
     res.send({message:"Banner Updated successFully. !"})
   })
 })
-
 // Banner Route End
 
-// Banner Route Start
-// Banner Route End
+// Service Route Start
+app.post('/service', async function (req,res){
+    let data = new ServiceModel(req.body)
+    await data.save();
+    res.send({message: "Service Created successfully..!"})
 
+    console.log(req.body);
+})
+app.get('/service', async function (req, res) {
+    let data = await ServiceModel.find({})
+    res.send(data);
+})
+
+
+
+// Service Route End
+
+// Service Route Start
+// Service Route End
 
 
 

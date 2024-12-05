@@ -48,6 +48,7 @@ main .right {
     height: 100vh;
     background-color: rgb(239 239 239);
     padding: 10px;
+    overflow-y: scroll;
 }
     
 .left ul {
@@ -278,4 +279,63 @@ main .right {
     color: #fff;
     background-color: #34495e;
 }
+.button {
+    font-size: 20px;
+    padding: 10px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#tableSection table{
+    width: 98%;
+    margin-left: 20px;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th{
+    font-size: 18px;
+}
+td{
+    font-size: 18px;
+    font-weight: 400;
+}
+.hidden {
+    display: none;
+}
+img {
+    max-width: 100px;
+    height: auto;
+}
+.button {
+    font-size: 20px;
+    padding: 10px 16px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+.button.edit {
+    background-color: #28A745;
+}
+.button.delete {
+    background-color: #DC3545;
+}
+.button:hover {
+    opacity: 0.9;
+}
+
+
+
 /* Service end */

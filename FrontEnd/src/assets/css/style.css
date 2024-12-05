@@ -182,7 +182,7 @@ body{
     margin-bottom: 50px;
 }
 #service .dFlex{
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 24px;
 }
