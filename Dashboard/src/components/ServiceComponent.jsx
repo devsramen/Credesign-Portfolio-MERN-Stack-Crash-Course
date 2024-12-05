@@ -35,10 +35,15 @@ const ServiceComponent = () => {
         axios.get("http://localhost:5050/service")
         .then((res) =>{
             setList(res.data)
-            console.log(res)
         })
     }, []);
 
+    let handelDelete = (item)=>{
+        console.log(item._id)
+        axios.post(`http://localhost:5050/service/${item._id}`).then((res)=>{
+            console.log(res.data)
+        })
+    }
 
 
     return (
@@ -88,7 +93,7 @@ const ServiceComponent = () => {
                                 <td className="subtitle-cell">{item.isImageShow?"Yes":"No"}</td>
                                 <td className="action-buttons">
                                     <button className="button edit">Edit</button>
-                                    <button className="button delete">Delete</button>
+                                    <button className="button delete" onClick={()=>{handelDelete(item)}}>Delete</button>
                                 </td>
                             </tr>
                         ))

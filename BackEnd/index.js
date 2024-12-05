@@ -63,6 +63,10 @@ app.get('/service', async function (req, res) {
     let data = await ServiceModel.find({})
     res.send(data);
 })
+app.delete('/service/:id', async function (req, res) {
+    let data = await ServiceModel.findOneAndDelete(req.params.id)
+    res.send({message: "Service Deleted successfully..!"})
+})
 
 
 
