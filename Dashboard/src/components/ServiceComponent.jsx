@@ -1,11 +1,14 @@
 import {Fragment, useEffect, useState} from 'react';
 import axios from "axios";
+import ToastMessage from "./ToastMessage.jsx";
 
 const ServiceComponent = () => {
     const [title, setTitle] = useState('');
     const [subTitle, setSubTitle] = useState('');
     const [image, setImage] = useState('');
     const [isImageShow, setIsImageShow] = useState(false);
+    const [show,setShow] = useState(false);
+    const [message,setMessage] = useState('');
 
     // sort data which come from database
     const [list, setList] = useState([]);
@@ -27,6 +30,11 @@ const ServiceComponent = () => {
             isImageShow:isImageShow,
         }).then((res)=>{
             console.log(res.data)
+            setTitle('');
+            setSubTitle('')
+            setIsImageShow(false)
+            setShow(true)
+            setMessage(res.data.message)
         })
         console.log(title,subTitle,isImageShow);
     }
@@ -39,9 +47,11 @@ const ServiceComponent = () => {
     }, []);
 
     let handelDelete = (item)=>{
-        console.log(item._id)
+        console.log(item._id,item.title)
         axios.delete(`http://localhost:5050/service/${item._id}`).then((res)=>{
             console.log(res.data)
+            setShow(true)
+            setMessage(res.data.message)
         })
     }
 
@@ -57,14 +67,14 @@ const ServiceComponent = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="title">Title:</label>
-                        <input onChange={handleTitle} type="text" id="title" name="title" placeholder="Enter title"/>
+                        <input value={title} onChange={handleTitle} type="text" id="title" name="title" placeholder="Enter title"/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="subtitle">Subtitle:</label>
-                        <input onChange={handleSubTitle} id="subtitle" type="text" name="subtitle" placeholder="Enter subtitle"/>
+                        <input value={subTitle} onChange={handleSubTitle} id="subtitle" type="text" name="subtitle" placeholder="Enter subtitle"/>
                     </div>
                     <div className="form-group">
-                        <input onChange={handleIsShowImage} type="checkbox" id="showImage" name="showImage"/>
+                        <input checked={isImageShow} onChange={handleIsShowImage} type="checkbox" id="showImage" name="showImage"/>
                         <label id="showImageTExt" htmlFor="showImage">Show Image:</label>
                     </div>
                     <button onClick={handleSubmit} id="serviceSubmit" type="submit">Submit</button>
@@ -101,6 +111,7 @@ const ServiceComponent = () => {
                     </tbody>
                 </table>
             </section>
+            <ToastMessage show={show} message={message}/>
         </Fragment>
     );
 };
