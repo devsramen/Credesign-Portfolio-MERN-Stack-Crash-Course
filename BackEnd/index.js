@@ -72,12 +72,6 @@ app.put('/serviceUpdate/:id', async function (req,res){
         res.send({message: "Service Updated successfully..!"})
     })
 })
-
-
-
-// Service Route End
-
-// Service Route Start
 // Service Route End
 
 
