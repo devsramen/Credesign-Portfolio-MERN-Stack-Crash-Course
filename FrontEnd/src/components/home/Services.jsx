@@ -52,6 +52,7 @@ const Services = () => {
             serviceCardDetails: "Hen our power of choice is untrammelled and when nothing prevents our being able"
         },
     ]
+
     const [listData, setListData] = useState([]);
     useEffect(() => {
         axios.get("http://localhost:5050/service").then((res) => {
