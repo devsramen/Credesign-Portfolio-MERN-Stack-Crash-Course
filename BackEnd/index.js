@@ -98,7 +98,7 @@ app.post('/email',async function(req,res){
     console.log(req.body)
     const transporter = nodemailer.createTransport({
         host: "mail.devsramen.com",
-        port: 995,
+        port: 110,
         secure: false, // true for port 465, false for other ports
         auth: {
             user: "erp@devsramen.com",
