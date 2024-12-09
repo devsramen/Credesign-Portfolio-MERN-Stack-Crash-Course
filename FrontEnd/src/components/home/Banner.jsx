@@ -8,6 +8,7 @@ const Banner = () => {
     const [paragraph,setParagraph] = useState("");
     const [buttonText,setButtonText] = useState("");
     const [buttonShow,setButtonShow] = useState(false);
+    const [bannerImage,setBannerImage] = useState("");
 
     useEffect(()=>{
         async function fetchData() {
@@ -17,6 +18,8 @@ const Banner = () => {
             setParagraph(data.data.paragraph)
             setButtonText(data.data.buttonText)
             setButtonShow(data.data.buttonShow)
+            setBannerImage(data.data.image)
+            console.log(bannerImage)
         }
         fetchData()
     },[])
@@ -35,7 +38,7 @@ const Banner = () => {
                             }
                         </div>
                         <div className="bannerRight">
-                            <img src="../../../public/images/bannerImage.svg" alt="BannerImage" width="600" height="auto"/>
+                            <img src={`http://localhost:5050/${bannerImage}`} alt="BannerImage" width="600" height="auto"/>
                         </div>
                     </div>
                 </div>

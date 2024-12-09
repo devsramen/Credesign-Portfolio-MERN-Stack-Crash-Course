@@ -247,6 +247,12 @@ main .right {
       font-size: 1rem;
   }
 }
+#dashBoardBannerImage{
+    width: 100px;
+    height: auto;
+    float: right;
+    margin-bottom: 20px;
+}
 
 /* Banner end */
 

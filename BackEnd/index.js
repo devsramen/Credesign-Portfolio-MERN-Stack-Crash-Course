@@ -5,10 +5,27 @@ const mongoose = require('mongoose');
 const Navbar = require('./src/model/NavbarModel');
 const Banner = require('./src/model/BannerModel');
 const ServiceModel = require('./src/model/ServiceModel');
+const multer = require("multer");
+const nodemailer = require("nodemailer");
+
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './uploads')
+    },
+    filename: function (req, file, cb) {
+        console.log(file, "file");
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+        cb(null, uniqueSuffix + '-' + file.originalname)
+    }
+})
+
+const upload = multer({ storage: storage })
 
 
 app.use(cors()) // access permission to send data from frontend to backend
 app.use(express.json()) // convert all data (which come from FrontEnd)) string to JSON
+app.use('/uploads', express.static('./uploads'))
 
 
 mongoose.connect('mongodb+srv://mernCrushCours:Mern321@cluster0.idcnaio.mongodb.net/MERN_Crush_Course?retryWrites=true&w=majority&appName=Cluster0')
@@ -35,8 +52,9 @@ app.put('/navBar/:id', function (req, res) {
 // NavBar Route End
 
 // Banner Route Start
-app.post("/banner",function(req,res){
-  let data = new Banner(req.body)
+app.post("/banner",upload.single("image"),function(req,res){
+    console.log(req.body,"banner")
+  let data = new Banner({...req.body,image: req.file.path})
   data.save()
   res.send({message: "Banner Created successfully..!"})  
 })
@@ -44,8 +62,9 @@ app.get('/banner', async function (req, res) {
  let data = await Banner.findOne({})
  res.send(data)
 })
-app.put('/banner/:id', function (req, res) {
-  Banner.findByIdAndUpdate(req.params.id,req.body).then(()=>{
+app.put('/banner/:id',upload.single("image"), function (req, res) {
+    // console.log(req.file.path,"banner")
+  Banner.findByIdAndUpdate(req.params.id,{...req.body,image: req.file.path}).then(()=>{
     res.send({message:"Banner Updated successFully. !"})
   })
 })
@@ -73,6 +92,36 @@ app.put('/serviceUpdate/:id', async function (req,res){
     })
 })
 // Service Route End
+
+// Contact Route start
+app.post('/email',async function(req,res){
+    console.log(req.body)
+    const transporter = nodemailer.createTransport({
+        host: "mail.devsramen.com",
+        port: 995,
+        secure: false, // true for port 465, false for other ports
+        auth: {
+            user: "erp@devsramen.com",
+            pass: "#@Me&myself321",
+        },
+    });
+
+    const info = await transporter.sendMail({
+        from: '"Maddison Foo Koch 👻" <maddison53@ethereal.email>', // sender address
+        to: "bar@example.com, baz@example.com", // list of receivers
+        subject: req.body.subject, // Subject line
+        html: `
+        <b>Name : </b>${req.body.name}
+        <b>Email : </b>${req.body.email}
+        <b>Message : </b>${req.body.message}
+        `, // html body
+    });
+
+    console.log("Message sent: %s", info.messageId);
+
+    res.send({message:"Email Sent successfully..!"})
+})
+// Contact Route end
 
 
 
