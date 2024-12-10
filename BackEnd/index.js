@@ -97,24 +97,23 @@ app.put('/serviceUpdate/:id', async function (req,res){
 app.post('/email',async function(req,res){
     console.log(req.body)
     const transporter = nodemailer.createTransport({
-        host: "mail.devsramen.com",
-        port: 110,
+        service:'gmail',
         secure: false, // true for port 465, false for other ports
         auth: {
-            user: "erp@devsramen.com",
-            pass: "#@Me&myself321",
+            user: "printrb72@gmail.com",
+            pass: "prjh caye clkc pgci",
         },
     });
 
     const info = await transporter.sendMail({
-        from: '"Maddison Foo Koch 👻" <maddison53@ethereal.email>', // sender address
-        to: "bar@example.com, baz@example.com", // list of receivers
+        from: '"ERP" <maddison53@ethereal.email>', // sender address
+        to: "example@example.com", // list of receivers
         subject: req.body.subject, // Subject line
         html: `
-        <b>Name : </b>${req.body.name}
+        <b>Name : </b>${req.body.fullName}
         <b>Email : </b>${req.body.email}
         <b>Message : </b>${req.body.message}
-        `, // html body
+        `
     });
 
     console.log("Message sent: %s", info.messageId);

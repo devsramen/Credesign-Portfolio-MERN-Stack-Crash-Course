@@ -20,9 +20,7 @@ const Contact = () => {
             console.log(error);
         })
     }
-
-
-
+    
     return (
         <Fragment>
             <section id="contact">

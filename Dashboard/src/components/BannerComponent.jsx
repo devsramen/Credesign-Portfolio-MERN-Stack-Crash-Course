@@ -38,7 +38,7 @@ const BannerComponent = () => {
 
         if(id){
             axios.put("http://localhost:5050/banner/"+id,data).then(res=>{
-                // console.log(res)
+                console.log(res)
             }).catch(error=>{
                 console.log(error)
             })
@@ -50,31 +50,31 @@ const BannerComponent = () => {
             })
         }
 
-        // if(id){
-        //     axios.put("http://localhost:5050/banner/"+id,{
-        //         heading:heading,
-        //         subHeading:subHeading,
-        //         paragraph:paragraph,
-        //         buttonText:buttonText,
-        //         buttonShow:buttonShow
-        //     }).then(res=>{
-        //         console.log(res)
-        //     }).catch(error=>{
-        //         console.log(error)
-        //     })
-        // }else{
-        //     axios.post("http://localhost:5050/banner",{
-        //         heading:heading,
-        //         subHeading:subHeading,
-        //         paragraph:paragraph,
-        //         buttonText:buttonText,
-        //         buttonShow:buttonShow
-        //     }).then(res=>{
-        //         console.log(res)
-        //     }).catch(error=>{
-        //         console.log(error)
-        //     })
-        // }
+        if(id){
+            axios.put("http://localhost:5050/banner/"+id,{
+                heading:heading,
+                subHeading:subHeading,
+                paragraph:paragraph,
+                buttonText:buttonText,
+                buttonShow:buttonShow
+            }).then(res=>{
+                console.log(res)
+            }).catch(error=>{
+                console.log(error)
+            })
+        }else{
+            axios.post("http://localhost:5050/banner",{
+                heading:heading,
+                subHeading:subHeading,
+                paragraph:paragraph,
+                buttonText:buttonText,
+                buttonShow:buttonShow
+            }).then(res=>{
+                console.log(res)
+            }).catch(error=>{
+                console.log(error)
+            })
+        }
     }
     useEffect(()=>{
         async function fetchData() {
